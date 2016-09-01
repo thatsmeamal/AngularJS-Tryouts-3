@@ -1,0 +1,42 @@
+<html ng-app="myApp">
+    <head>
+        <title>$http service</title>
+        <script type="text/javascript" src="JS/angular.min.js"></script>
+        <script type="text/javascript" src="JS/4.6 app.js"></script>
+    </head>
+    <body ng-controller="SimpleController">
+        <div>
+            <div>
+                <label>Enter your password</label><input type='password' ng-model="pass"/>
+            </div>
+
+            <hr />
+
+            <div>
+                <label>Rules</label>
+                <ul>
+                	<li ng-repeat="rule in rules">{{ rule.rulename }}</li>
+                </ul>
+            </div>
+            <br />
+            <div>
+               <label>Add new rule</label>
+               <br />
+               <input type="text" ng-model="newrule" />
+               <br />
+               <a href="#" class="btn btn-default" ng-click="addRule()">Add</a>
+            </div>
+            <div ng-show="abc">
+                <label>Rules</label>
+                <ul>
+                	<li ng-repeat="rule in rules">{{ rule.rulename }}</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!--
+
+-->

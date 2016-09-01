@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+    <head>
+        <title>Watchers & Digest Loop</title>
+        <script type="text/javascript" src="JS/angular.min.js"></script>
+        <script type="text/javascript" src="JS/4.4 app.js"></script>
+    </head>
+    <body ng-controller="SimpleController">
+        
+        <div>
+            <label>Enter your name</label><input type='text' ng-model="name"/>
+        </div>
+        
+        <hr />
+        
+        <h1>{{'Hello '+changeName()+' !!!'}}</h1>
+            
+    </body>
+</html>
+
+<!--
+
+-->

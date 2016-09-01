@@ -1,0 +1,99 @@
+<html ng-app="myApp">
+    <head>
+        <title>Common Directives</title>
+        <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
+        <script type="text/javascript" src="JS/angular.min.js"></script>
+        <script type="text/javascript" src="JS/4.5 app.js"></script>
+    </head>
+    <body ng-controller="SimpleController">
+        <div>
+            <div>
+                <label>Enter your password</label><input type='password' ng-model="pass"/>
+            </div>
+
+            <hr />
+
+            <div ng-class="{'alert alert-warning':pass.length < 5 , 'alert alert-success':pass.length === 5, 'alert alert-danger':pass.length > 5}">
+                Must be atleast 5 characters
+            </div>
+        </div>
+<!--
+The ng-class directive take as value a JSON object: name-value pair.
+
+The name corresponds to the class we need to set and the value corresponds to the condition
+at which the class is to be set.
+-->
+        <br />
+        <br />
+        <hr />
+        <hr />
+        
+        <div>
+            <div>
+                <label>Enter your password</label><input type='password' ng-model="pass1"/>
+            </div>
+
+            <hr />
+
+            <div ng-if="pass1.length < characters">
+                Password should atleast have 5 characters
+            </div>
+            
+            <div ng-show="pass1.length === characters">
+                Password has 5 characters
+            </div>
+            
+            <div ng-hide="pass1.length <= characters">
+                Password has more than 5 characters
+            </div>
+        </div>  
+<!--
+The directives ng-if and ng-show(or ng-hide) are normally similar. 
+
+The difference is that, when using ng-if, the div completely disappears when the condition 
+evaluates to true.
+
+When using ng-show or ng-hide, the div is made hidden, when the condition evaluates
+to true.
+
+To see the differences, run the file and see the console(Elements tab)
+-->
+        <br />
+        <br />
+        <hr />
+        <hr />
+        
+<!--
+We can also interpolate class names using ng-class as shown below.
+
+We have set the class as 'alert' and for each of the conditions, we set ng-class as
+'alert-warning', 'alert-success' or 'alert-danger so as to effectively set the class as
+alert alert-warning, alert alert-success or alert alert-danger.
+-->
+        <div>
+            <div>
+                <label>Enter your password</label><input type='password' ng-model="pass2"/>
+            </div>
+
+            <hr />
+
+            <div class="alert" ng-class="{'alert-warning':pass2.length < 5 , 'alert-success':pass2.length === 5, 'alert-danger':pass2.length > 5}">
+                <div ng-if="pass2.length < characters">
+                Password should atleast have 5 characters
+                </div>
+
+                <div ng-show="pass2.length === characters">
+                    Password has 5 characters
+                </div>
+
+                <div ng-hide="pass2.length <= characters">
+                    Password has more than 5 characters
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!--
+
+-->

@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+    <head>
+        <title>Two-way Data Binding</title>
+        <script type="text/javascript" src="JS/angular.min.js"></script>
+        <script type="text/javascript" src="JS/4.2 app.js"></script>
+    </head>
+    <body ng-controller="SimpleController">
+        
+        <div>
+            <label>Enter your name</label><input type='text' ng-model="name"/>
+        </div>
+        
+        <hr />
+        
+        <h1>{{'Hello '+changeName()+' !!!'}}
+            
+    </body>
+</html>
+
+<!--
+Here, the directive ng-model helps in achieving two-way data binding.
+
+The value 'name' assigned to the ng-model directive is a variable of the $scope
+service. It is defined in the js file.
+
+Hence, anything that is typed in the text box gets available in the js file. So,
+it can be modified into whatever manner we like.
+
+Here, the text entered in the text box is changed into uppercase using the changeName()
+function.
+-->

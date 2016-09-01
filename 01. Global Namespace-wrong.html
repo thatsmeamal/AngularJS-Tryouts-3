@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Global Namespace</title>
+        <script type="text/javascript" src="JS/01. attr1-wrong.js"></script>
+        
+        <script type="text/javascript" src="JS/01. attr2-wrong.js"></script>
+        
+        <script>
+            console.log(person)
+        </script>
+    </head>
+    <body>
+        <h1>Hello World !!!</h1>
+    </body>
+</html>
+
+<!--
+Here, in the two js files, a variable named 'person' is assigned to two names.
+Since, the variable name used is same in both the js files, the names get overwritten.
+This is because, the variable 'person' is in global namespace.
+
+To avoid overwriting the variable, it can be assigned to an object.
+-->
